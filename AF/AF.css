@@ -1,0 +1,23 @@
+.item-tarefa {
+    cursor: pointer;
+    border-left: 4px solid gray !important;
+}
+
+.item-tarefa.completed {
+    border-left-color: red !important;
+    background-color: #fdfdfd;
+}
+
+.item-tarefa.completed .texto-tarefa {
+    text-decoration: line-through;
+    color: var(--cor-texto-suave);
+    opacity: 0.8;
+}
+
+#lista-nota {
+    display: grid;
+}
+
+.nota {
+    position: relative;
+}

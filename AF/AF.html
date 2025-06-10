@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facens AF - Painel Organizador</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="AF.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-2-strong">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-clipboard-check me-2"></i>
+                <strong>Painel AF - FACENS</strong>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+
+        <h1 class="mb-4 text-center">Painel Interativo de Organização Pessoal</h1>
+
+        <ul class="nav nav-tabs nav-fill mb-3" id="meuPainelAbas" role="tablist">
+            <li class="nav-item"">
+                <a data-mdb-tab-init class=" nav-link active" id="aba-tarefas-tab" href="#aba-tarefas"><i
+                    class="fas fa-tasks me-2"></i>Tarefas</a>
+            </li>
+            <li class="nav-item">
+                <a data-mdb-tab-init class="nav-link" id="aba-notas-tab" href="#aba-notas""><i class=" fas
+                    fa-note-sticky me-2"></i>Notas</a>
+            </li>
+            <li class="nav-item">
+                <a data-mdb-tab-init class="nav-link" id="aba-calendario-tab" href="#aba-calendario"><i
+                        class="fas fa-calendar-alt me-2"></i>Calendário</a>
+            </li>
+        </ul>
+
+        <div class="tab-content card shadow-2-strong" id="meuPainelConteudo">
+
+            <div class="tab-pane fade show active" id="aba-tarefas">
+                <div class="card-body p-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="entrada-tarefa" placeholder="Qual é a boa de hoje?">
+                        <button class="btn btn-primary" type="button" id="add-btn-tarefa">
+                            <i class="fas fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                    <ul id="lista-tarefa" class="list-group list-group-flush">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="aba-notas">
+                <div class="card-body p-4">
+                    <div class="form-outline mb-4">
+                        <textarea class="form-control" id="entrada-nota" rows="4"></textarea>
+                        <label class="form-label" for="entrada-nota">Abra seu coração, o que quer salvar? ♥</label>
+                    </div>
+                    <button class="btn btn-warning w-100" id="add-btn-nota">
+                        <i class="fas fa-save me-1"></i> Salvar Nota
+                    </button>
+                    <hr class="my-4">
+                    <div id="lista-nota">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="aba-calendario">
+                <div class="card-body p-4">
+                    <div id='calendario'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+    <script src="AF.js"></script>
+</body>
+
+</html>
